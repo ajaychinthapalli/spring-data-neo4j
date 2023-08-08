@@ -14,5 +14,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           from-branch: develop
           to-branch: test
-          repository-owner: achin16
+          repository-owner: ajaychinthapalli
           repository: spring-data-neo4j
