@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Open PR
         id: open_pr
-        uses: rematocorp/open-pull-request-action@v1
+        uses: ajaychinthapalli/open-pull-request-action@3ba8b3d428a07c8157cc0e7e3b3d5e579febeacb
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           from-branch: develop
