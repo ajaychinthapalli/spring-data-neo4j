@@ -1,0 +1,15 @@
+name: Create Pull Request
+on:
+  push:
+jobs:
+  create-pull-request:
+    name: Create Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wandpsilva/open-simple-pr@v1
+        with:
+          branch-origin: ${{ github.ref_name }}
+          target-branch: 'test'
+          title: 'feat: create pull request workflow'
+          body: 'create pull request workflow'
