@@ -1,15 +1,15 @@
 version: 2.1
 orbs:
-  auto_ci: nowsecure/ci-auto-orb@1.2.1
+  auto_ci: nowsecure/ci-auto-orb@1.0.5
 jobs:
   build:
     docker:
-    - image: openjdk:8
+    - image: circleci/openjdk:8-jdk
     steps:
     - attach_workspace:
         at: /tmp/myworkspace
     - checkout
-    - run: cp APKPure_v3.19.51_apkpure.com.apk /tmp/myworkspace/test.apk
+    - run: cp apkpure_app_887.apk /tmp/myworkspace/test.apk
     - auto_ci/mobile_security_test:
         auto_file: /tmp/myworkspace/test.apk
         auto_wait: "30"
